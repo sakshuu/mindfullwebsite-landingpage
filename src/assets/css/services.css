@@ -1,0 +1,56 @@
+/* Custom swiper styles */
+.services-swiper {
+  width: 100%;
+}
+
+.services-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Hide default navigation arrows */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev{
+  margin-left: 18%;
+}
+.swiper-button-next {
+  margin-right: 18%;
+}
+/* Custom navigation button styles */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: gray;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0)
+}
+/* Image hover effects */
+.filter {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.filter:hover {
+  filter: grayscale(0%);
+}
+
+/* Alternative approach using Tailwind (already included in className above) */
+/*
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.group:hover .grayscale {
+  filter: grayscale(0%);
+}
+*/

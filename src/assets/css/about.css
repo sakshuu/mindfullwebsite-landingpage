@@ -1,0 +1,71 @@
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .timeline-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #080808;
+    border: 5px solid white;
+    /* box-shadow: 0 0 0 2px #4a6bff; */
+    flex-shrink: 0;
+    z-index: 2;
+  }
+  
+  .timeline-connector {
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    height: calc(100% + 50px);
+    width: 3px;
+    background-color: #e0e0e0;
+    z-index: 1;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.5s ease 0.3s, background-color 0.3s ease;
+  }
+  
+  .timeline-connector.visible {
+    transform: scaleY(1);
+    /* background-color: #4a6bff; */
+  }
+  
+  .timeline-content {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    /* padding-top: 2px; */
+    transition: color 0.3s ease;
+  }
+  
+  .timeline-item.visible .timeline-content {
+    color: #e9c5c5;
+    /* font-weight: 600; */
+  }
+  /* {pointer loop end} */
+
+  /*
+ blue  1E51B1
+ light bluw 11526B
+   3E1893
+  */
