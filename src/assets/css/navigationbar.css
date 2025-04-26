@@ -56,3 +56,15 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+
+.navbar-container.visible {
+  transform: translateY(0);
+}
+
+.navbar-container.hidden {
+  transform: translateY(-100%);
+}
+
+/* Rest of your existing navbar styles */

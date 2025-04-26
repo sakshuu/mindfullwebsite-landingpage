@@ -1,5 +1,23 @@
 import React from 'react'
-import { icon1, icon2, icon3, icon4, icon5, leftarrow, rightarrow } from '../assets/img/services';
+import { icon1, icon2, icon3, icon4, icon5, leftarrow, rightarrow, service1 , service2,
+   service3,
+   service4,
+   service5,
+   service6,
+   service7,
+   service8,
+   service9,
+  service10,
+  service11,
+  service12,
+  service13,
+  service14,
+  service15,
+  service16,
+  service17,
+  service18,
+  service19,
+  service20} from '../assets/img/services';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./../assets/css/services.css"
 import { Navigation } from 'swiper/modules';
@@ -16,10 +34,10 @@ const Ourservces = () => {
       title:'UI/UX & Web Solutions',
       desc:'We design intuitive digital experiences that don’t just look good—they work seamlessly. From responsive websites to user-friendly platforms, we craft interfaces that guide, engage, and convert. Our thoughtful approach to UI/UX has helped brands simplify the user journey and increase online engagement meaningfully.',
       images: [
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
+        service1,
+        service2,
+        service3,
+        service4,
       ]
     },
     {
@@ -28,10 +46,10 @@ const Ourservces = () => {
       title:'Digital Presence & Performance Marketing eiusmod.',
       desc:'We help brands be seen—and remembered.With a mix of strategy, creativity, and analytics, our performance marketing solutions have helped clients grow online, connect with their ideal audience, and achieve consistent, trackable growth across platforms.',
       images: [
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
+        service5,
+        service6,
+        service7,
+        service8,
       ]
     },
     {
@@ -40,10 +58,10 @@ const Ourservces = () => {
       title:'Branding & Identity Design',
       desc:'In a busy world, visuals capture attention first. We produce visuals—photos, videos, graphics—that captivate and communicate your story clearly. Our content has helped brands grab attention, boost engagement, and express their identity in ways that truly resonate with audiences.',
       images: [
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
+        service9,
+        service10,
+        service11,
+        service12,
       ]
     },
     {
@@ -52,10 +70,10 @@ const Ourservces = () => {
       title:'Visual Content Creation',
       desc:'We help brands be seen—and remembered.With a mix of strategy, creativity, and analytics, our performance marketing solutions have helped clients grow online, connect with their ideal audience, and achieve consistent, trackable growth across platforms.',
       images: [
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
+        service13,
+        service14,
+        service15,
+        service16,
       ]
     },
     {
@@ -64,14 +82,21 @@ const Ourservces = () => {
       title:'Marketing Collateral & Advertising ',
       desc:'We turn ideas into impactful campaigns and collaterals that stick. From brochures to billboards, print ads to digital banners, we ensure every asset tells your story with clarity and creativity. Our work has helped brands leave lasting impressions and spark real-world results.',
       images: [
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
-        Macbookpro,
+        service17,
+        service18,
+        service19,
+        service20,
       ]
     },
   ]
   return <>
+<div className='pl-48'>
+<div className='text-xl text-gray-500 mb-1'>Our Services</div>
+      <div className='text-lg text-gray-300  max-w-2xl'>
+      From strategy to branding and content creation, our <br /> services drive measurable success and long-term growth.
+      </div>
+</div>
+
   <div className="relative py-16 px-4 sm:px-6 lg:px-8 mx-auto" style={{width:'85vw'}}>
         <div className="relative">
           {/* Navigation buttons positioned outside the padded content */}

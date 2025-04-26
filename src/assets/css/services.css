@@ -24,8 +24,8 @@
 /* Custom navigation button styles */
 .swiper-button-prev,
 .swiper-button-next {
-  width: 48px;
-  height: 48px;
+  width: 48px !important;
+  height: 48px !important ;
   display: flex;
   align-items: center;
   justify-content: center;

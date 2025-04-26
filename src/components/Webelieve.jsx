@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./../assets/css/about.css"
 import { mission, values, vision, whymindfullimg } from '../assets/img/about';
+import { group } from '../assets/img/home';
 
 const Webelieve = () => {
+
+   const containerRef = useRef(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
   // pointer loop started js
   const points = [
     "Branding",
@@ -77,6 +83,34 @@ const Webelieve = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, [animationCycle]); // Add animationCycle to dependencies
+
+  const handleMouseDown = (e) => {
+      setIsDragging(true);
+      setStartX(e.pageX - containerRef.current.offsetLeft);
+      setScrollLeft(containerRef.current.scrollLeft);
+      containerRef.current.style.cursor = 'grabbing';
+    };
+    
+    const handleMouseLeave = () => {
+      if (isDragging) {
+        setIsDragging(false);
+        containerRef.current.style.cursor = 'grab';
+      }
+    };
+    
+    const handleMouseUp = () => {
+      setIsDragging(false);
+      containerRef.current.style.cursor = 'grab';
+    };
+    
+    const handleMouseMove = (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - containerRef.current.offsetLeft;
+      const walk = (x - startX) * 2; // Adjust multiplier for faster/slower scrolling
+      containerRef.current.scrollLeft = scrollLeft - walk;
+    };
+
   return <>
     <div className='grid grid-cols-3 gap-4 content-center place-content-center p-20'>
 <div className='col-span-2 px-4 md:px-8 lg:px-12'>
@@ -118,6 +152,8 @@ const Webelieve = () => {
     </div>
 
 
+  
+
   <div className="timeline-container col-span-1 mt-28" >
       {points.map((point, index) => (
         <div 
@@ -134,6 +170,23 @@ const Webelieve = () => {
     </div>
     </div>
 <div  >
+
+<div className='text-xl text-gray-500 mb-1 px-28'>We Work</div>
+
+<div className="relative overflow-x-auto cursor-pointer">
+      <div
+        ref={containerRef}
+        className="mx-auto w-[99vw] h-[52vh] overflow-x-auto scrollbar select-none"
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        style={{ cursor: 'grab' }}  >
+        <div className="w-[300vw]">
+          <img src={group} className="h-[50vh] w-[800vw] pointer-events-none" alt="" />
+        </div>
+      </div>
+      </div>
 
     <div className='flex justify-between mb-4 relative p-20 '>
     {aboutImag.map((item, index) => (

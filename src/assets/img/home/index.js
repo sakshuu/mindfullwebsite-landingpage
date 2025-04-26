@@ -33,3 +33,4 @@ export { default as  bwswiper3 } from "./bwswiper3.png";
 export { default as  bwswiper4 } from "./bwswiper4.png";
 export { default as  group } from "./group.png";
 export { default as  Macbookpro } from "./Macbookpro.png";
+export { default as  groupicons } from "./groupicons.png";

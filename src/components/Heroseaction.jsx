@@ -83,6 +83,13 @@ const imagesicons = [
   {src:icon24},
   {src:icon25},
 ]
+
+const scrollToContact = () => {
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
   return <>
    <div className='mainhero'>
         <div className='hero-sub-content'>
@@ -98,7 +105,7 @@ const imagesicons = [
               <p className='main-content mt-4'>
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
-              <button className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+              <button onClick={scrollToContact} className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
                 Get Started
               </button>
             </div>

@@ -19,6 +19,8 @@
   .ticker-item {
     display: inline-block;
     vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
     @apply text-6xl font-medium;
   }
  

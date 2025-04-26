@@ -1,41 +1,25 @@
-import React, { useRef, useState } from 'react'
-import { Heroseaction, Navigationbar, Ourservces, Webelieve } from '../components'
+import React, {  useEffect, useRef, useState } from 'react'
+import { Contactus, Heroseaction, Myfooter, Navigationbar, Ourservces, Webelieve } from '../components'
 import "./../assets/css/home.css";
-import { group } from '../assets/img/home'
+import { group, Industries } from '../assets/img/home'
 import { icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13, icon14, icon15, icon16, icon17, icon18, icon19, icon20, icon21, icon22, icon23, icon24, icon25, } from '../assets/img/logos';
+import { loading } from '../assets/videos';
 
 const Home = () => {
-  const containerRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-    containerRef.current.style.cursor = 'grabbing';
-  };
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   
-  const handleMouseLeave = () => {
-    if (isDragging) {
-      setIsDragging(false);
-      containerRef.current.style.cursor = 'grab';
-    }
-  };
-  
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    containerRef.current.style.cursor = 'grab';
-  };
-  
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust multiplier for faster/slower scrolling
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-  
+
+
+  useEffect(() => {
+    // Simulate loading time or wait for video to load
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
 const imagesicons = [
   {src:icon1},
   {src:icon2},
@@ -63,39 +47,74 @@ const imagesicons = [
   {src:icon24},
   {src:icon25},
 ]
-  return <>
-  <Navigationbar/>
-  <Heroseaction/>
-  <Webelieve/>
-  <div className="relative overflow-x-auto cursor-pointer">
-      <div
-        ref={containerRef}
-        className="mx-auto w-[99vw] h-[52vh] overflow-x-auto scrollbar select-none"
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        style={{ cursor: 'grab' }}  >
-        <div className="w-[300vw]">
-          <img src={group} className="h-[50vh] w-[800vw] pointer-events-none" alt="" />
+
+if (isLoading) {
+  return (
+    <div className="loading-video-container" style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'black',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 9999
+    }}>
+      <video 
+        autoPlay 
+        muted 
+        playsInline 
+        onEnded={() => setIsLoading(false)}
+        onCanPlayThrough={() => setVideoLoaded(true)}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }}
+      >
+        <source src={loading} type="video/mp4" />
+        {/* Fallback if video doesn't load */}
+        <div style={{color: 'white', textAlign: 'center'}}>
+          Loading...
         </div>
-      </div>
-      </div>
-      <Ourservces/>
-      {/* icons */}
-      <div className="ticker-container">
+      </video>
+    </div>
+  );
+}
+
+  return <>
+      <Navigationbar/>
+    <section id="home">
+        <Heroseaction/>
+    </section>
+    <section id="about">
+        <Webelieve/>
+    </section>
+    <section id="services">
+        <Ourservces/>
+    </section>
+ {/* icons */}
+ <div className="ticker-container">
         <div className="ticker-content">
           {imagesicons.map((item, index) => (
           <div  className="ticker-item"> 
              <img
              src={item.src}
-             alt={`gallery-${index}`} className='w-44'
+             alt={`groupicons-${index}`} className='w-44'
              />
           </div>
           ))}
         </div>
       </div>
 
+      <div className='title-home mb-24 ml-48 '>Industries we serve</div>
+      <img src={Industries} alt="" style={{width:'100%', marginBottom:'40px'}} />
+    <section id="contact">
+        <Contactus/>
+    </section>
+    <Myfooter/>
   </>
 }
 
