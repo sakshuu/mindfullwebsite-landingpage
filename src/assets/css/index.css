@@ -28,9 +28,9 @@
    }
    .hero-sub-content{
      height: 90vh;    
-     @apply grid grid-cols-5 gap-4 content-center place-content-center;
+     @apply grid md:grid-cols-5 md:gap-14  md:content-center md:place-content-center;
      position: absolute;
    }
    .title-home {
-    @apply text-2xl text-gray-400 pt-10 ;
+    @apply text-2xl text-gray-400 pt-10;
   }

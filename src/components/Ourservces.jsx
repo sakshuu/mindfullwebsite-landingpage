@@ -23,7 +23,6 @@ import "./../assets/css/services.css"
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { arrownext, arrowpre, Macbookpro } from '../assets/img/home';
 
 const Ourservces = () => {
   const cardColors = ['#E6BDFF', '#F8E8ED', '#D4E2FF', '#E6BDFF', '#F8E8ED']

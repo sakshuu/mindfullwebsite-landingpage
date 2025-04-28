@@ -20,6 +20,7 @@ const Home = () => {
 
     return () => clearTimeout(timer);
   }, []);
+  
 const imagesicons = [
   {src:icon1},
   {src:icon2},
