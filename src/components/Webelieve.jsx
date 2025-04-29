@@ -182,7 +182,7 @@ const Webelieve = () => {
       onMouseMove={handleMouseMove}
       style={{ cursor: 'grab' }}
     >
-      <div className="w-[300vw]">
+      <div className="w-[400vw]">
         <img src={group} className="h-[38vh] sm:h-[50vh] w-[800vw] pointer-events-none object-cover" alt="" />
       </div>
     </div>
