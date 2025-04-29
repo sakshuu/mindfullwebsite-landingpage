@@ -89,6 +89,10 @@ const Ourservces = () => {
     },
   ]
   return <>
+
+  <div className="content-desktop-view">
+
+  {/* </div> */}
 <div className='pl-48'>
 <div className='text-xl text-gray-500 mb-1'>Our Services</div>
       <div className='text-lg text-gray-300  max-w-2xl'>
@@ -183,6 +187,99 @@ const Ourservces = () => {
             </Swiper>
           </div>
         </div>
+      </div>
+      </div>
+
+      <div className="content-mobile-view p-6">
+<div className='text-xl text-gray-500 mb-1'>Our Services</div>
+<div className="relative py-16 px-4 sm:px-6 lg:px-8 mx-auto" style={{width:'85vw'}}>
+        <div className="relative">
+          {/* Navigation buttons positioned outside the padded content */}
+          <div className="absolute inset-y-0 left-0 flex items-center -ml-12 z-10">
+            <button className="swiper-button-prev bg-gray-500 rounded-full shadow-md transition-colors">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg> */}
+              <img src={leftarrow} className='min-w-6' alt="" />
+            </button>
+          </div>
+          
+          <div className="absolute inset-y-0 right-0 flex items-center -mr-12 z-10">
+            <button className="swiper-button-next bg-gray-500 rounded-full p-3 shadow-md  transition-colors">
+              <img src={rightarrow} className='min-w-6' alt="" />
+              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg> */}
+            </button>
+          </div>
+
+          {/* Padded content area */}
+          <div className="px-8 sm:px-12 lg:px-16 cursor-pointer">
+            <Swiper
+              modules={[Navigation]}
+              navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+              spaceBetween={30}
+              slidesPerView={1}
+              className="services-swiper"
+            >
+              {ourWorks.map((item, index) => (
+                <SwiperSlide key={item.id}>
+                  <div className="flex flex-col lg:flex-row gap-4">
+                    {/* Text content with dynamic background color */}
+                    <div 
+                      className="lg:w-1/2 rounded-lg md:p-12 xl:p-20"
+                      style={{ backgroundColor: cardColors[index % cardColors.length] }}
+                    >
+                      <div className='mb-4'>
+                        <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
+                      </div>
+                      <h2 className="text-2xl font-bold text-black   xl:mt-8">
+                        {item.title}
+                      </h2>
+                      <p className="text-lg text-black leading-relaxed xl:mt-8">
+                        {item.desc}
+                      </p>
+                    </div>
+                    
+                    {/* Images grid */}
+                    <div className="lg:w-1/2">
+                      {/* <div className="grid grid-cols-2 gap-4">
+                        {item.images.map((image, idx) => (
+                          <div key={idx} className="relative overflow-hidden aspect-square rounded-lg">
+                            <img
+                              src={image}
+                              alt={`${item.title} example ${idx + 1}`}
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div> */}
+
+                       <div className="grid grid-cols-2 gap-4">
+                        {item.images.map((image, idx) => (
+                          <div 
+                            key={idx} 
+                            className="relative overflow-hidden aspect-square rounded-lg group"
+                          >
+                            <img
+                              src={image}
+                              alt={`${item.title} example ${idx + 1}`}
+                              className="absolute inset-0 w-full h-full object-cover filter grayscale transition-all duration-300 group-hover:grayscale-0"
+                            />
+                          </div>
+                        ))}
+                      </div> 
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
       </div>
   </>
 }

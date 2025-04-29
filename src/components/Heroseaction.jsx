@@ -30,6 +30,9 @@ const scrollToContact = () => {
   }
 };
   return <>
+  <div className="content-desktop-view">
+
+  {/* </div> */}
    <div className='mainhero'>
         <div className='hero-sub-content'>
           <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }} className='md:col-span-2 sm:col-span-5 md:ml-40'>
@@ -49,7 +52,7 @@ const scrollToContact = () => {
               </button>
             </div>
           </div>
-          <div className='md:col-span-3 sm:col-span-5'>
+          {/* <div className='md:col-span-3 sm:col-span-5'>
             <iframe 
               width="670" 
               height="415" 
@@ -60,8 +63,43 @@ const scrollToContact = () => {
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
+      </div>
+      </div>
+
+      <div className="content-mobile-view">
+      <div className='mainhero-mobile'>
+      <div className='hero-sub-content-mobile'>
+      <div className='text-5xl font-bold ml-6 mt-9'>We</div>
+              <div className='flex gap-2 items-center mt-1'>
+                <div 
+                  className={`w-4 h-4 rounded-full mt-6  ${currentColorClass}`}
+                ></div>
+                <div className='text-5xl font-bold'>{currWord}</div>
+              </div>
+
+
+            <div className='mt-4'>
+            <iframe 
+              width="325" 
+              height="200" 
+              src="https://www.youtube.com/embed/9VsEAEX6C9Q?si=ZBXkMK7Cmpv-qCJz" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p className='text-base text-gray-300 mt-1'>
+                From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
+              </p>
+              <button onClick={scrollToContact} className="bg-transparent mt-4 hover:bg-blue-500 text-white  hover:text-white py-2 px-5 border border-blue-500 hover:border-transparent rounded-md">
+                Get Started
+              </button>
+      </div>
+      </div>
       </div>
   </>
 }
