@@ -259,7 +259,7 @@ const Webelieve = () => {
 
   {/* We Work Section */}
 <Ourworks/>
-<div className='mt-4'>
+{/* <div className='mt-4'>
   <div className=' relative '>
         <img src={missionMobile} alt="" style={{width:'95vh'}} />
             <div className='absolute w-40 right-0 top-4' > 
@@ -289,6 +289,58 @@ const Webelieve = () => {
               </div>
             </div>
     </div>
+</div> */}
+<div className='mt-4 space-y-4 md:space-y-6'>
+  {/* Mission Section */}
+  <div className='relative mx-auto max-w-6xl'>
+    <img 
+      src={missionMobile} 
+      alt="Mission" 
+      className='w-full h-auto object-cover rounded-lg shadow-lg' 
+    />
+    <div className='absolute inset-0 flex items-center justify-end pr-4 md:pr-8'>
+      <div className=' p-4 rounded-lg w-[45%] md:w-[35%] lg:w-[30%] backdrop-blur-sm'>
+        <div className='text-white text-center text-lg md:text-xl font-bold mb-2'>Mission</div>
+        <div className='text-gray-200 text-center  text-xs md:text-sm leading-tight'>
+          To build brand experiences hard and thoughts.hold...and truly impossible.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Vision Section */}
+  <div className='relative mx-auto max-w-6xl'>
+    <img 
+      src={visionmobile} 
+      alt="Vision" 
+      className='w-full h-auto object-cover rounded-lg shadow-lg' 
+    />
+    <div className='absolute inset-0 flex items-center justify-start pl-4 md:pl-8'>
+      <div className=' p-4 rounded-lg w-[45%] md:w-[35%] lg:w-[30%] backdrop-blur-sm'>
+        <div className='text-white text-center text-lg md:text-xl font-bold mb-2'>Vision</div>
+        <div className='text-gray-200  text-center text-xs md:text-sm leading-tight'>
+          To lead a mindful reclusion in prompts. dream, and digital storytelling.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Values Section */}
+  <div className='relative mx-auto max-w-6xl'>
+    <img 
+      src={valuesmobile} 
+      alt="Values" 
+      className='w-full h-auto object-cover rounded-lg shadow-lg' 
+    />
+    <div className='absolute inset-0 flex items-center justify-end pr-4 md:pr-8'>
+      <div className=' p-4 rounded-lg w-[45%] md:w-[35%] lg:w-[30%] backdrop-blur-sm'>
+        <div className='text-white text-center text-lg md:text-xl font-bold mb-2'>Values</div>
+        <div className='text-gray-200  text-center  text-xs md:text-sm leading-tight'>
+          We don't settle.We experiment...evolve, areaspect new possibilities.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

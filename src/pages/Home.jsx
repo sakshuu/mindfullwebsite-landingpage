@@ -5,7 +5,6 @@ import { group, Industrie1, Industrie10, Industrie2, Industrie3, Industrie4, Ind
 import { icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13, icon14, icon15, icon16, icon17, icon18, icon19, icon20, icon21, icon22, icon23, icon24, icon25, } from '../assets/img/logos';
 import { loading } from '../assets/videos';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
@@ -34,7 +33,6 @@ const Home = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  
   const Industriesites = [
     Industrie1,
     Industrie2,
