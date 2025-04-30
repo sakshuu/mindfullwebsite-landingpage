@@ -214,7 +214,7 @@ const Ourservces = () => {
   </div>
 
   <div className="content-mobile-view">
-<div className='text-xl text-gray-500 mb-6'>Our Services</div>
+<div className='text-xl text-gray-500 mb-6 ml-5'>Our Services</div>
 <div className="relative    " style={{width:'100vw'}}>
         <div className="relative cursor-point">
           
