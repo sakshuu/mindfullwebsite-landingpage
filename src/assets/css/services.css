@@ -68,3 +68,12 @@
 .services-swiper-mobile .swiper-pagination-bullet-active {
   background: #d1d1d1 !important;
 }
+
+.services-swiper .swiper-slide {
+  height: auto !important;
+  min-height: 100%;
+}
+
+.services-swiper .swiper-wrapper {
+  align-items: stretch;
+}

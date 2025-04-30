@@ -157,65 +157,13 @@ const Ourservces = () => {
           </div>
 
           {/* Padded content area */}
-          <div className="px-8 sm:px-12 lg:px-16 cursor-pointer">
-            <Swiper
-              modules={[Navigation]}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
-              spaceBetween={30}
-              slidesPerView={1}
-              className="services-swiper"
-            >
-              {ourWorks.map((item, index) => (
-                <SwiperSlide key={item.id}>
-                  <div className="flex flex-col lg:flex-row gap-4">
-                    {/* Text content with dynamic background color */}
-                    <div 
-                      className="lg:w-1/2 rounded-lg md:p-12 xl:p-20"
-                      style={{ backgroundColor: cardColors[index % cardColors.length] }}
-                    >
-                      <div className='mb-4'>
-                        <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
-                      </div>
-                      <h2 className="text-2xl font-bold text-black   xl:mt-8">
-                        {item.title}
-                      </h2>
-                      <p className="text-lg text-black leading-relaxed xl:mt-8">
-                        {item.desc}
-                      </p>
-                    </div>
-                    
-                    {/* Images grid */}
-                    <div className="lg:w-1/2">
-
-                       <div className="grid grid-cols-2 gap-4">
-                        {item.images.map((image, idx) => (
-                          <div 
-                            key={idx} 
-                            className="relative overflow-hidden aspect-square rounded-lg group"
-                          >
-                            <img
-                              src={image}
-                              alt={`${item.title} example ${idx + 1}`}
-                              className="absolute inset-0 w-full h-full object-cover filter grayscale transition-all duration-300 group-hover:grayscale-0"
-                            />
-                          </div>
-                        ))}
-                      </div> 
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+         
         </div>
       </div>
   </div>
 
   <div className="content-mobile-view">
-<div className='text-xl text-gray-500 mb-6'>Our Services</div>
+<div className='text-xl text-gray-500 mb-6 ml-4'>Our Services</div>
 <div className="relative    " style={{width:'100vw'}}>
         <div className="relative cursor-point">
           
@@ -235,8 +183,8 @@ const Ourservces = () => {
                     <div 
                       className=" rounded-lg p-4"
                       style={{ backgroundColor: cardColors[index % cardColors.length] }} >
-                      <div className='mb-4'>
-                        <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
+                      <div className='mb-4 flex justify-center'>
+                        <img src={item.icon} className="w-10 h-10 ml-4 " alt="" />
                       </div>
                       <h2 className="text-xl font-bold text-black  ">
                         {item.title}
