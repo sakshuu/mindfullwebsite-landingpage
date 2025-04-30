@@ -4,3 +4,4 @@ export { default as Heroseaction } from "./Heroseaction";
 export { default as Myfooter } from "./Myfooter";
 export { default as Ourservces } from "./Ourservces";
 export { default as Webelieve } from "./Webelieve";
+export { default as Ourworks } from "./Ourworks";

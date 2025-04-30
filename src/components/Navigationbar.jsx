@@ -137,15 +137,18 @@ const Navigationbar = () => {
                         Services
                     </a>
                     <a 
+                        href="https://forms.gle/qXoQAAMGpcKFcieB9" 
+                        className="mobile-nav-link"
+                    
+                    >
+                    Career  </a>
+                    <a 
                         href="#contact" 
                         className="mobile-nav-link"
                         onClick={(e) => {
                             e.preventDefault();
                             handleNavigation('contact');
-                        }}
-                    >
-                        Careers
-                    </a>
+                        }}> Contact Us  </a>
                 </div>
             )}
         </nav>

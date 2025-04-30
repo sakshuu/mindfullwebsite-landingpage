@@ -39,7 +39,6 @@
      position: absolute;
    }
    .hero-sub-content-mobile {
-     /* @apply grid md:grid-cols-5 md:gap-14  md:content-center md:place-content-center; */
      position: absolute;
    }
    .title-home {
@@ -60,3 +59,46 @@
      display: block;  
    }
   }
+
+  /* swiper real  */
+
+  .Industriesites-swiper {
+    position: relative !important;
+    width: 100vw !important;
+    padding: 20px;
+  }
+
+  .swiper {
+    /* width: 100% !important; */
+    /* background-color: red; */
+    height: 100%;
+    /* width: 100%; */
+    /* padding: 10px !important; */
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: white;
+    /* position: relative !important; */
+    /* opacity: 1000 !important; */
+    /* margin-bottom: -20px !important; */
+    border: 1px solid #ccc;
+  }
+  
+.swiper-slide {
+  text-align: center;
+  /* font-size: 18px; */
+  /* background: #fff; */
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .swiper-pagination-bullet-active {
+    background: #007bff !important; /* Blue color for active bullet */
+  }
+  
+  /* Make all industry images the same height and width */
+
+  

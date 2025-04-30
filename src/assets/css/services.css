@@ -34,6 +34,16 @@
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0)
 }
+.services-swiper-mobile {
+  width: 100vw !important;
+  padding-bottom: 30px;
+}
+.services-swiper-mobile .swiper-slide {
+  width: 100% !important ;
+  /* margin-right: 15px; */
+  padding: 8px;
+}
+
 /* Image hover effects */
 .filter {
   filter: grayscale(100%);
@@ -43,14 +53,18 @@
 .filter:hover {
   filter: grayscale(0%);
 }
-
-/* Alternative approach using Tailwind (already included in className above) */
-/*
-.grayscale {
-  filter: grayscale(100%);
+/* services.css */
+.services-swiper-mobile .swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 20px;
 }
 
-.group:hover .grayscale {
-  filter: grayscale(0%);
+.services-swiper-mobile .swiper-pagination-bullet {
+  background: #666 !important;
+  opacity: 1 !important;
 }
-*/
+
+.services-swiper-mobile .swiper-pagination-bullet-active {
+  background: #d1d1d1 !important;
+}

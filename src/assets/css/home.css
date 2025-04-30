@@ -33,14 +33,11 @@ background-image: url(./../img/home/swiperbg.png);
 /* height: 73vh; */
 margin-top: 7%
   }
-  .mySwiper{
-    /* background-color: green; */
-  }
+ 
   .container-sm{
     @apply py-14;
     position: relative;
     height: 40%;
-    /* background-color: red; */
   }
 .swiper {
   width: 100%;
@@ -48,24 +45,6 @@ margin-top: 7%
   padding-top: 50px;
   padding-bottom: 50px;
 }
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-} */
-
-
-/* .swiper-slide {
-  transition: all 0.3s ease;
-} */
-
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  transition: filter 0.3s ease;
-} */
-/* Add these to your existing CSS */
-/* Add these to your existing CSS */
-
 
 
 .swiper-slide:not(.swiper-slide-active) img {
@@ -150,21 +129,6 @@ margin-top: 7%
 
 
 
-/* Add these to your existing CSS */
-
-
-/* Adjust the scale for adjacent slides */
-
-/* .swiper-slide-active .swiper-image {
-  transform: scale(1.2); 
-  filter: grayscale(0%) brightness(1);
-  z-index: 10; 
-} */
-/* .swiper-slide-prev .swiper-image,
-.swiper-slide-next .swiper-image {
-  transform: scale(0.9); 
-  filter: grayscale(50%) brightness(0.8); 
-} */
 
 /* Ensure the active slide is on top */
 .swiper-slide-active {

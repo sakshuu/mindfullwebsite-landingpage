@@ -66,12 +66,12 @@ const scrollToContact = () => {
           </div> */}
         </div>
       </div>
-      </div>
+  </div>
 
-      <div className="content-mobile-view">
+  <div className="content-mobile-view">
       <div className='mainhero-mobile'>
       <div className='hero-sub-content-mobile'>
-      <div className='text-5xl font-bold ml-6 mt-9'>We</div>
+      <div className='text-5xl font-bold ml-6 mt-16'>We</div>
               <div className='flex gap-2 items-center mt-1'>
                 <div 
                   className={`w-4 h-4 rounded-full mt-6  ${currentColorClass}`}
@@ -80,7 +80,7 @@ const scrollToContact = () => {
               </div>
 
 
-            <div className='mt-4'>
+            {/* <div className='mt-4'>
             <iframe 
               width="325" 
               height="200" 
@@ -91,16 +91,16 @@ const scrollToContact = () => {
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen
             ></iframe>
-          </div>
-          <p className='text-base text-gray-300 mt-1'>
+          </div> */}
+          <p className='text-base text-gray-300 mt-10'>
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
-              <button onClick={scrollToContact} className="bg-transparent mt-4 hover:bg-blue-500 text-white  hover:text-white py-2 px-5 border border-blue-500 hover:border-transparent rounded-md">
+              <button onClick={scrollToContact} className="bg-transparent mt-4 hover:bg-blue-500 text-white  hover:text-white py-2 px-7 border border-blue-500 hover:border-transparent rounded-md">
                 Get Started
               </button>
       </div>
       </div>
-      </div>
+  </div>
   </>
 }
 

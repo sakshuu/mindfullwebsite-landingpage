@@ -71,11 +71,9 @@
   
   .timeline-connector.visible {
     transform: scaleY(1);
-    /* background-color: #4a6bff; */
   }
   .timeline-connector-mobile.visible {
     transform: scaleY(1);
-    /* background-color: #4a6bff; */
   }
   
   .timeline-content {
@@ -83,22 +81,13 @@
     font-size: 18px;
     font-weight: 500;
     color: #333;
-    /* padding-top: 2px; */
     transition: color 0.3s ease;
   }
   
   .timeline-item.visible .timeline-content {
     color: #e9c5c5;
-    /* font-weight: 600; */
   }
   .timeline-item-mobile.visible .timeline-content {
     color: #e9c5c5;
-    /* font-weight: 600; */
   }
-  /* {pointer loop end} */
-
-  /*
- blue  1E51B1
- light bluw 11526B
-   3E1893
-  */
+ 

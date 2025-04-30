@@ -27,7 +27,6 @@
   @apply inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none;
 }
 
-/* Mobile Navigation */
 .mobile-nav-links {
   @apply w-full md:hidden mt-2 py-2 px-4 rounded-md;
 }
@@ -40,7 +39,6 @@
   @apply    text-blue-500 block px-3 py-2 rounded-md text-sm font-medium ;
 }
 
-/* Animation for mobile menu */
 .mobile-nav-links {
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -66,5 +64,3 @@
 .navbar-container.hidden {
   transform: translateY(-100%);
 }
-
-/* Rest of your existing navbar styles */
