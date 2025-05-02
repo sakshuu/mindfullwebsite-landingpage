@@ -228,7 +228,7 @@ const Ourservces = () => {
                 <SwiperSlide key={item.id}>
                   <div className="flex flex-col gap-4 ">
                     <div 
-                      className=" rounded-lg p-4  h-[42vh]"
+                      className=" rounded-lg p-4  h-[45vh]"
                       style={{ backgroundColor: cardColors[index % cardColors.length] }} >
                       <div className='mb-4'>
                         <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
