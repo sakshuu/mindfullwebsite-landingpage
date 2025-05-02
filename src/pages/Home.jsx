@@ -169,13 +169,14 @@ pagination={{
 clickable: true,
 bulletActiveClass: "swiper-pagination-bullet-active blue-dot"}}
 modules={[Pagination]}
-spaceBetween={20}
-slidesPerView={1}
->
+spaceBetween={30}
+slidesPerView={1}>
       {
         Industriesites.map((item) => (
-          <SwiperSlide key={item}>
-          <img src={item} key={item} style={{width:'100%', display:'block'}} alt="" />
+          <SwiperSlide key={item} style={{width:'100vw',}} >
+            <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+          <img src={item} key={item} style={{ display:'block',}} className='w-fit' alt="" />
+            </div>
         </SwiperSlide>
         ))
       }

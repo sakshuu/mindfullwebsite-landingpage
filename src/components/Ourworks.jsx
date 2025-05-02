@@ -126,7 +126,7 @@ const Ourworks = () => {
         <>
             {/* Desktop View */}
             <div className="content-desktop-view">
-                <div className='text-lg md:text-xl text-gray-500 mb-3 px-6 md:px-14 lg:px-28'>Are Work</div>
+                <div className='text-lg md:text-xl text-gray-500 mb-3 px-6 md:px-14 lg:px-28'>Our Work</div>
                 <div className="relative">
                     <div
                         ref={desktopContainerRef}

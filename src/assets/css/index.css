@@ -61,11 +61,24 @@
   }
 
   /* swiper real  */
-
+  .swiper-pagination {
+    position: relative;
+    margin-top: 1rem;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    opacity: 1;
+  }
+  .blue-dot {
+    background: #0066ff !important;
+  }
   .Industriesites-swiper {
     position: relative !important;
     width: 100vw !important;
     padding: 20px;
+    /* background-color: red; */
   }
 
   .swiper {
