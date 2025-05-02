@@ -87,7 +87,7 @@ const Ourservces = () => {
     {
       id:'2',
       icon:icon2,
-      title:'Digital Presence & Performance Marketing eiusmod.',
+      title:'Digital Presence & Performance Marketing.',
       desc:'We help brands be seen—and remembered.With a mix of strategy, creativity, and analytics, our performance marketing solutions have helped clients grow online, connect with their ideal audience, and achieve consistent, trackable growth across platforms.',
       images: [
         service5,
