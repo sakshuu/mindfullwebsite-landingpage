@@ -86,7 +86,7 @@ const Contactus = () => {
                     <h3 className="text-sm text-white">Call Center</h3>
                   </div>
                   <p className="text-gray-400 text-sm">+917980009725</p>
-                  {/* <span className="text-gray-400 text-sm">1234567890</span> */}
+                  <span className="text-gray-400 text-sm">+918888866365</span>
                 </div>
   
                 {/* Our Location */}
