@@ -149,7 +149,7 @@ const Webelieve = () => {
 
   <Ourworks/>
 
-  <div className='flex flex-wrap justify-between mb-4 relative p-20 '>
+  {/* <div className='flex flex-wrap justify-between mb-4 relative p-20 '>
     {aboutImag.map((item, index) => (
         <div >
         <img src={item.src} alt="" style={{height:'95vh'}} />
@@ -161,7 +161,28 @@ const Webelieve = () => {
             </div>
         </div>
     ))}
+    </div> */}
+ <div className="flex flex-wrap justify-between p-4 md:p-20 bg-[#0a0a2e] min-h-screen">
+      {aboutImag.map((item) => (
+        <div key={item.id} className="w-full md:w-1/3 px-2 mb-8 md:mb-0 relative">
+          <div className="relative">
+            <img
+              src={item.src|| "/placeholder.svg"}
+              alt={item.title}
+              width={400}
+              height={600}
+              className="w-full h-auto"
+            />
+
+            <div className="absolute md:bottom-[12%] xl:bottom-[20%] left-0 right-0 text-center md:px-6 xl:px-20 ">
+              <h3 className="text-white md:text-xl xl:text-3xl mb-6">{item.title}</h3>
+              <p className="text-gray-300 md:text-lg xl:tetx-1xl">{item.desc}</p>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
+    
 </div>
 </div>
 
