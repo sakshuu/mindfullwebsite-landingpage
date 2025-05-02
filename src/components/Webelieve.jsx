@@ -236,37 +236,7 @@ const Webelieve = () => {
 
   {/* We Work Section */}
 <Ourworks/>
-{/* <div className='mt-4'>
-  <div className=' relative '>
-        <img src={missionMobile} alt="" style={{width:'95vh'}} />
-            <div className='absolute w-40 right-0 top-4' > 
-              <div className='p-3'>
-            <div className=' text-center  text-lg'>Mission</div>
-        <div className=' text-center text-xs text-gray-300'>To build brand experiences that are thoughtful, bold, and truly impactful.</div>
-              </div>
-            </div>
-    </div>
 
-  <div className=' mt-3 relative '>
-        <img src={visionmobile} alt="" style={{width:'95vh'}} />
-            <div className='absolute w-40 left-0 top-4' > 
-              <div className='p-3' >
-            <div className=' text-center  text-lg'>Vision</div>
-        <div className=' text-center text-xs text-gray-300'>To lead a mindful revolution in branding, design, and digital storytelling.</div>
-              </div>
-            </div>
-    </div>
-
-  <div className='mt-3  relative '>
-        <img src={valuesmobile} alt="" style={{width:'95vh'}} />
-            <div className='absolute w-40 right-0 top-4' > 
-              <div className='p-3'>
-            <div className=' text-center  text-lg'>Values</div>
-        <div className=' text-center text-xs text-gray-300'>To lead a mindful revolution in branding, design, and digital storytelling.</div>
-              </div>
-            </div>
-    </div>
-</div> */}
 <div className='mt-4 space-y-4 md:space-y-6'>
   {/* Mission Section */}
   <div className='relative mx-auto max-w-6xl'>
