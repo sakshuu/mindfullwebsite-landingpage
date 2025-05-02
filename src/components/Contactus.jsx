@@ -79,7 +79,7 @@ const Contactus = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 content-start items-start">
                 
                 {/* Call Center */}
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <div className="flex items-center">
                     {/* Replace with your PNG icon */}
                   
@@ -90,7 +90,7 @@ const Contactus = () => {
                 </div>
   
                 {/* Our Location */}
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <div className="flex items-center">
                     
                     <h3 className="text-sm text-white">Our Location</h3>
@@ -103,7 +103,7 @@ const Contactus = () => {
                 </div>
   
                 {/* Email */}
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <div className="flex items-center">
                  
                     <h3 className="text-sm text-white">Email</h3>
