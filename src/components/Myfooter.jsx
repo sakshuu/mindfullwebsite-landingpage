@@ -191,10 +191,9 @@ const Myfooter = () => {
               <span className='text-xl'>Business / Sales Enquiry</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <div className="flex flex-col md:flex-col xl:flex-row gap-4 mt-4">
               <a
-                href="#"    target="_blank" rel="noreferrer"    onClick={handleWhatsAppClick}
-
+                href="#"  target="_blank" rel="noreferrer"    onClick={handleWhatsAppClick}
                 className="py-2 px-8 rounded flex items-center justify-center space-x-2" 
                 style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
               >

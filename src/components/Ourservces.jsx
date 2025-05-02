@@ -14,7 +14,7 @@ const Ourservces = () => {
     {
       id:'1',
       icon:icon1,
-      title:'UI/UX & Web Solutions',
+      title:'UI/UX & Web Solutions .',
       desc:'We design intuitive digital experiences that don’t just look good—they work seamlessly. From responsive websites to user-friendly platforms, we craft interfaces that guide, engage, and convert. Our thoughtful approach to UI/UX has helped brands simplify the user journey and increase online engagement meaningfully.',
       images: [
         service1,
@@ -26,7 +26,7 @@ const Ourservces = () => {
     {
       id:'2',
       icon:icon2,
-      title:'Digital Presence & Performance Marketing eiusmod.',
+      title:'Digital Presence & Performance Marketing .',
       desc:'We help brands be seen—and remembered.With a mix of strategy, creativity, and analytics, our performance marketing solutions have helped clients grow online, connect with their ideal audience, and achieve consistent, trackable growth across platforms.',
       images: [
         service5,
@@ -128,7 +128,7 @@ const Ourservces = () => {
   return <>
 
   <div className="content-desktop-view">
-<div className='pl-48'>
+<div className='pl-48 mt-12'>
 <div className='text-xl text-gray-500 mb-1'>Our Services</div>
       <div className='text-lg text-gray-300  max-w-2xl'>
       From strategy to branding and content creation, our <br /> services drive measurable success and long-term growth.
@@ -156,7 +156,7 @@ const Ourservces = () => {
           </div>
 
           {/* Padded content area */}
-          <div className="px-8 sm:px-12 lg:px-16 cursor-pointer">
+          <div className="px-8 sm:px-12 lg:px-16 cursor-pointer ">
             <Swiper
               modules={[Navigation]}
               navigation={{
@@ -169,21 +169,23 @@ const Ourservces = () => {
             >
               {ourWorks.map((item, index) => (
                 <SwiperSlide key={item.id}>
-                  <div className="flex flex-col lg:flex-row gap-4">
+                  <div className="flex flex-col lg:flex-row gap-4 ">
                     {/* Text content with dynamic background color */}
                     <div 
-                      className="lg:w-1/2 rounded-lg md:p-12 xl:p-20"
+                      className="lg:w-1/2 rounded-lg md:p-4 xl:p-10"
                       style={{ backgroundColor: cardColors[index % cardColors.length] }}
                     >
-                      <div className='mb-4'>
+                      <div className='xl:py-20 mb:py-2'>
+                      <div className='mb-4 '>
                         <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
                       </div>
-                      <h2 className="text-2xl font-bold text-black   xl:mt-8">
+                      <h2 className="xl:text-2xl md:text-xl md:mb-4 font-bold text-black   xl:mt-8">
                         {item.title}
                       </h2>
-                      <p className="text-lg text-black leading-relaxed xl:mt-8">
+                      <p className="xl:text-lg md:text-sm  text-black leading-relaxed xl:mt-8">
                         {item.desc}
                       </p>
+                      </div>
                     </div>
                     
                     {/* Images grid */}
@@ -232,7 +234,7 @@ const Ourservces = () => {
                 <SwiperSlide key={item.id}>
                   <div className="flex flex-col gap-4 ">
                     <div 
-                      className=" rounded-lg p-4"
+                      className=" rounded-lg p-4  h-[40vh]"
                       style={{ backgroundColor: cardColors[index % cardColors.length] }} >
                       <div className='mb-4'>
                         <img src={item.icon} className="w-10 h-10 ml-4" alt="" />

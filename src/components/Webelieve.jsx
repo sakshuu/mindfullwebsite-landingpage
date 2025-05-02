@@ -102,7 +102,7 @@ const Webelieve = () => {
             className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 
                       group-hover:opacity-50 transition-opacity duration-300"
             style={{
-              boxShadow: `inset 0 0 25px ${card.shadowColor}`
+              boxShadow: `inset 0 0 50px ${card.shadowColor}`
             }}
           />
           

@@ -36,6 +36,8 @@
 }
 .services-swiper-mobile {
   width: 100vw !important;
+  /* change here */
+  /* height: 700px !important;  */
   padding-bottom: 30px;
 }
 .services-swiper-mobile .swiper-slide {
