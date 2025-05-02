@@ -29,12 +29,13 @@ const Contactus = () => {
       }
     }, 100);
   };
+  // const response = await fetch('http://localhost:5000/api/contact', {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('home/thebutt/admin.mindfull.co.in/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
