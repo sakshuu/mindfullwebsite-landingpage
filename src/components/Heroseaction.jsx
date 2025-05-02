@@ -35,7 +35,7 @@ const scrollToContact = () => {
   {/* </div> */}
    <div className='mainhero'>
         <div className='hero-sub-content'>
-          <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }} className='md:col-span-2 sm:col-span-5 md:ml-40'>
+          <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }} className='md:col-span-2 ml-32'>
             <div>
               <div className='text-7xl font-bold md:ml-9 sm:mt-40'>We</div>
               <div className='flex gap-2 items-center'>
@@ -44,7 +44,7 @@ const scrollToContact = () => {
                 ></div>
                 <div className='text-7xl font-bold'>{currWord}</div>
               </div>
-              <p className='main-content mt-4'>
+              <p className='main-content mt-4 w-96'>
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
               <button onClick={scrollToContact} className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">

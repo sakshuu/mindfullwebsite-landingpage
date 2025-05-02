@@ -1,15 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./../assets/css/about.css"
-import { mission, missionMobile, values, valuesmobile, vision, visionmobile, whymindfullimg } from '../assets/img/about';
-import { group } from '../assets/img/home';
+import { mission, missionMobile, values, valuesmobile, vision, visionmobile} from '../assets/img/about';
 import Ourworks from './Ourworks';
 
 const Webelieve = () => {
-
-   const containerRef = useRef(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
   // pointer loop started js
   const points = [
     "Branding",
@@ -84,49 +78,25 @@ const Webelieve = () => {
     return () => clearInterval(timer);
   }, [animationCycle]); // Add animationCycle to dependencies
 
-  const handleMouseDown = (e) => {
-      setIsDragging(true);
-      setStartX(e.pageX - containerRef.current.offsetLeft);
-      setScrollLeft(containerRef.current.scrollLeft);
-      containerRef.current.style.cursor = 'grabbing';
-    };
-    
-    const handleMouseLeave = () => {
-      if (isDragging) {
-        setIsDragging(false);
-        containerRef.current.style.cursor = 'grab';
-      }
-    };
-    
-    const handleMouseUp = () => {
-      setIsDragging(false);
-      containerRef.current.style.cursor = 'grab';
-    };
-    
-    const handleMouseMove = (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - containerRef.current.offsetLeft;
-      const walk = (x - startX) * 2; // Adjust multiplier for faster/slower scrolling
-      containerRef.current.scrollLeft = scrollLeft - walk;
-    };
+
 
   return <>
 
-<div className="content-desktop-view">
-{/* </div> */}
-<div className='grid grid-cols-1 lg:grid-cols-3 gap-4 content-center place-content-center p-4 md:p-10 lg:p-20'>
-  <div className='lg:col-span-2 px-4 md:px-8 lg:px-12'>
+<div className="content-desktop-view ">
+  <div className='p-4 md:p-10 lg:p-20'>
+
     <div className='text-lg md:text-xl text-gray-500 mb-1'>We Believe</div>
     <div className='text-base md:text-lg text-gray-300 mb-6 md:mb-10 max-w-2xl'>
-      Our services have a proven track <br className='hidden sm:block' /> record of boosting businesses
-    </div>
-    
+      Growth you can see, impact you can  <br className='hidden sm:block' />  measure, success you can believe in.
+    {/* </div> */}
+  </div>
+  <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 content-center place-content-center '>
+  <div className='lg:col-span-2 px-4 md:px-8 lg:px-12'>
     <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8'>
       {weBelieve.map((card) => (
         <div 
           key={card.id}
-          className="group bg-[#111111] rounded-2xl p-8 md:p-10 lg:p-14 transition-all duration-300 relative overflow-hidden"
+          className="group bg-[#111111] rounded-2xl py-12 w-full transition-all duration-300 relative overflow-hidden"
         >
           <div 
             className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 
@@ -143,7 +113,7 @@ const Webelieve = () => {
             >
               {card.number}
             </div>
-            <div className='text-xl md:text-2xl text-white text-center'>
+            <div className='text-xl md:text-lg text-gray-300 text-center'>
               {card.title}
             </div>
           </div>
@@ -151,9 +121,10 @@ const Webelieve = () => {
       ))}
     </div>
   </div>
+<div className='lg:col-span-1  place-items-center'>
 
-  {/* Right Column - Timeline */}
-  <div className="timeline-container lg:col-span-1 mt-10 lg:mt-28">
+{/* </div> */}
+  <div className="timeline-container ">
     {points.map((point, index) => (
       <div 
         key={`${animationCycle}-${index}`}
@@ -167,30 +138,16 @@ const Webelieve = () => {
       </div>
     ))}
   </div>
-</div>
+  </div>
+</div> 
+</div> 
+
+
 
 {/* We Work Section */}
 <div>
-  {/* <div className='text-lg md:text-xl text-gray-500 mb-1 px-6 md:px-14 lg:px-28'>We Work</div>
-
-  <div className="relative overflow-x-auto cursor-pointer">
-    <div
-      ref={containerRef}
-      className="mx-auto w-[99vw] h-[40vh] sm:h-[52vh] overflow-x-auto scrollbar select-none"
-      onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-      style={{ cursor: 'grab' }}
-    >
-      <div className="w-[300vw]">
-        <img src={group} className="h-[38vh] sm:h-[50vh] w-[800vw] pointer-events-none object-cover" alt="" />
-      </div>
-    </div>
-  </div> */}
 
   <Ourworks/>
-
 
   <div className='flex flex-wrap justify-between mb-4 relative p-20 '>
     {aboutImag.map((item, index) => (
@@ -218,8 +175,7 @@ const Webelieve = () => {
       {weBelieve.map((card) => (
         <div  key={card.id} className="group bg-[#111111] rounded-2xl py-7 md:p-10 lg:p-14 transition-all duration-300 relative overflow-hidden"
         >
-          <div 
-            className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 
+          <div   className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 
                       group-hover:opacity-50 transition-opacity duration-300"
             style={{
               boxShadow: `inset 0 0 25px ${card.shadowColor}`

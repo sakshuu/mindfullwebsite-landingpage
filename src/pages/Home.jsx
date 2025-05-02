@@ -19,7 +19,7 @@ const Home = () => {
     // Simulate loading time or wait for video to load
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Adjust time as needed
+    }, 100); // Adjust time as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -165,17 +165,10 @@ if (isLoading) {
   <div className='Industriesites-swiper'>
     <div>
 <Swiper 
-// pagination={true} 
-// modules={[Pagination]} 
-// className="mySwiper" 
-// spaceBetween={20}
-// slidesPerView={1}
-
 pagination={{
-  clickable: true,
-  bulletActiveClass: "swiper-pagination-bullet-active blue-dot"}}
+clickable: true,
+bulletActiveClass: "swiper-pagination-bullet-active blue-dot"}}
 modules={[Pagination]}
-// className="mySwiper"
 spaceBetween={20}
 slidesPerView={1}
 >

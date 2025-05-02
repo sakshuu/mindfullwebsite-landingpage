@@ -4,7 +4,7 @@ import { call, facebook, insta, linkdin, mail2, massage, mindfulllogo, wp } from
 const Myfooter = () => {
   const [showCopied, setShowCopied] = useState(false);
   const phoneNumber = '+917980009725';
-  const displayNumber = '7980009725';
+  const displayNumber = '+917980009725';
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -23,6 +23,7 @@ const Myfooter = () => {
       }
     }, 100);
   };
+
   const handleWhatsAppClick = () => {
     // First try opening WhatsApp directly
     window.open('https://wa.me/7980009725', '_blank');
@@ -35,7 +36,6 @@ const Myfooter = () => {
     }, 100);
   };
  
-
   const handlePhoneClick = (e) => {
     const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
@@ -81,22 +81,22 @@ const Myfooter = () => {
                 <div className='mt-10'>
                   <div className="flex space-x-6 pt-3">
                     <div className='w-8 h-8 cursor-pointer'>
-                      <a href="https://www.linkedin.com/company/mindfull-creative-studio/">
+                      <a href="https://www.linkedin.com/company/mindfull-creative-studio/" target="_blank" rel="noreferrer">
                         <img src={linkdin} alt="" />
                       </a>
                     </div>
                     <div className='w-8 h-8 cursor-pointer'>
-                      <a href="https://www.linkedin.com/company/mindfull-creative-studio/">
+                      <a href="https://www.facebook.com/share/1AAnudm6Fw/" target="_blank" rel="noreferrer">
                         <img src={facebook} alt="" />
                       </a>
                     </div> 
                     <div className='w-8 h-8 cursor-pointer'>
-                      <a href="https://www.instagram.com/mindfull.co.in/">
+                      <a href="https://www.instagram.com/mindfull.co.in/" target="_blank" rel="noreferrer">
                         <img src={insta} alt="" />
                       </a>
                     </div> 
                     <div className='w-8 h-8 mt-1 cursor-pointer' onClick={handleEmailClick}>
-                      <a href="mailto:marketing@mindfull.co.in">
+                      <a href="mailto:marketing@mindfull.co.in" >
                         <img src={mail2} alt="" />
                       </a>
                     </div> 
@@ -158,6 +158,7 @@ const Myfooter = () => {
                 </li>
                 <li>
                   <a 
+                  target="_blank" rel="noreferrer"
                                       href="https://forms.gle/qXoQAAMGpcKFcieB9" 
                     // href="#career" 
                     // onClick={(e) => {
@@ -192,7 +193,7 @@ const Myfooter = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <a
-                href="#"       onClick={handleWhatsAppClick}
+                href="#"    target="_blank" rel="noreferrer"    onClick={handleWhatsAppClick}
 
                 className="py-2 px-8 rounded flex items-center justify-center space-x-2" 
                 style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
@@ -203,7 +204,7 @@ const Myfooter = () => {
               <div className="relative">
         <a
           href={`tel:${phoneNumber}`}
-          onClick={handlePhoneClick}
+          onClick={handlePhoneClick} target="_blank" rel="noreferrer"
           className="py-2 px-8 rounded flex items-center justify-center space-x-2 bg-blue-100"
         >
           <img src={call} alt="Call" className="w-5 h-5" />
@@ -220,7 +221,7 @@ const Myfooter = () => {
 
             </div>
 
-            <a onClick={handleEmailClick}
+            <a onClick={handleEmailClick} 
               href="mailto:marketing@mindfull.co.in"
               className="py-2 px-8 mt-3 rounded flex items-center justify-center space-x-2" 
               style={{backgroundColor:'rgba(212, 226, 255, 1)', width:'330px'}}
@@ -300,18 +301,18 @@ const Myfooter = () => {
                 <div className='mt-4'>
                   <div className='text-lg font-medium'>Social Network</div>
                   <div className="flex space-x-6 pt-3">
-                    <div className='w-8 h-8 cursor-pointer'>
-                      <a href="https://www.linkedin.com/company/mindfull-creative-studio/">
+                    <div className='w-8 h-8 cursor-pointer' >
+                      <a href="https://www.linkedin.com/company/mindfull-creative-studio/" target="_blank" rel="noreferrer">
                         <img src={linkdin} alt="" />
                       </a>
                     </div>
                     <div className='w-8 h-8 cursor-pointer'>
-                      <a href="https://www.linkedin.com/company/mindfull-creative-studio/">
+                      <a href="https://www.facebook.com/share/1AAnudm6Fw/" target="_blank" rel="noreferrer">
                         <img src={facebook} alt="" />
                       </a>
                     </div> 
                     <div className='w-8 h-8 cursor-pointer'>
-                      <a href="https://www.instagram.com/mindfull.co.in/">
+                      <a href="https://www.instagram.com/mindfull.co.in/" target="_blank" rel="noreferrer">
                         <img src={insta} alt="" />
                       </a>
                     </div> 
@@ -366,6 +367,7 @@ const Myfooter = () => {
               
                 <li>
                   <a 
+                  target="_blank" rel="noreferrer"
                                       href="https://forms.gle/qXoQAAMGpcKFcieB9" 
                     // href="#career" 
                     // onClick={(e) => {

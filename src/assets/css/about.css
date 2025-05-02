@@ -1,7 +1,7 @@
   .timeline-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding:16px;
     position: relative;
   }
   
@@ -90,4 +90,5 @@
   .timeline-item-mobile.visible .timeline-content {
     color: #e9c5c5;
   }
+ 
  

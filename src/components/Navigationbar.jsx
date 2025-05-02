@@ -68,6 +68,7 @@ const Navigationbar = () => {
                     Services
                 </a>
                 <a 
+                target="_blank" rel="noreferrer"
                     href="https://forms.gle/qXoQAAMGpcKFcieB9" 
                     className="nav-link"
                     // onClick={(e) => {
@@ -136,7 +137,7 @@ const Navigationbar = () => {
                     >
                         Services
                     </a>
-                    <a 
+                    <a target="_blank" rel="noreferrer"
                         href="https://forms.gle/qXoQAAMGpcKFcieB9" 
                         className="mobile-nav-link"
                     
