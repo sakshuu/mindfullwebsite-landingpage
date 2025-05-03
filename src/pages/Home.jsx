@@ -19,7 +19,7 @@ const Home = () => {
     // Simulate loading time or wait for video to load
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 100); // Adjust time as needed
+    }, 3000); // Adjust time as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -110,27 +110,27 @@ if (isLoading) {
   );
 }
 
-if (isMobile) {
-  return (
-    <div className="mobile-message" style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: '#000',
-      color: '#fff',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-      padding: '20px',
-      zIndex: 9999
-    }}>
-      <h2>Our Mobile Experience is Currently in Development</h2>
-    </div>
-  );
-}
+// if (isMobile) {
+//   return (
+//     <div className="mobile-message" style={{
+//       position: 'fixed',
+//       top: 0,
+//       left: 0,
+//       width: '100%',
+//       height: '100%',
+//       backgroundColor: '#000',
+//       color: '#fff',
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       textAlign: 'center',
+//       padding: '20px',
+//       zIndex: 9999
+//     }}>
+//       <h2>Our Mobile Experience is Currently in Development</h2>
+//     </div>
+//   );
+// }
 
   return <>
   

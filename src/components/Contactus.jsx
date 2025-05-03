@@ -18,17 +18,7 @@ const Contactus = () => {
       [name]: value
     }));
   };
-  const handleEmailClick = () => {
-    // First try standard mailto approach
-    window.location.href = 'mailto:marketing@mindfull.co.in';
-    
-    // Fallback for mobile devices or special cases
-    setTimeout(() => {
-      if (!document.hidden) {
-        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=marketing@mindfull.co.in', '_blank');
-      }
-    }, 100);
-  };
+
   // const response = await fetch('http://localhost:5000/api/contact', {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,6 +46,18 @@ const Contactus = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleEmailClick = () => {
+    // First try standard mailto approach
+    window.location.href = 'mailto:marketing@mindfull.co.in';
+    
+    // Fallback for mobile devices or special cases
+    setTimeout(() => {
+      if (!document.hidden) {
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=marketing@mindfull.co.in', '_blank');
+      }
+    }, 100);
   };
 
   return ( <>
