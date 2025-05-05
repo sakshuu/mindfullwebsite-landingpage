@@ -4,7 +4,7 @@
 }
 
 .navbar-logo .logo-text {
-  @apply text-2xl font-bold text-white flex items-center;
+  @apply text-2xl font-bold text-white flex  items-center;
 }
 
 .navbar-links {
@@ -45,9 +45,10 @@
 
 .word-cycler {
   animation: fadeIn 0.5s ease-in-out;
-  margin-bottom: -12px;
+  margin-bottom: -21px;
   font-size: 1rem;
   font-weight: 400;
+  margin-left: -10px !important;
 }
 
 @keyframes fadeIn {

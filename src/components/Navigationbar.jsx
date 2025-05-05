@@ -29,8 +29,11 @@ const Navigationbar = () => {
     return (
         <nav className="navbar-container">
             <div className="navbar-logo">
-                <span className="logo-text">
+                <span className="logo-text" style={{cursor:'pointer'}}>
+                    <a   href="#home" 
+                    className="nav-link" >
                     <img src={mindfull} alt="Logo" width={50} />  
+                    </a>
                     <span className="word-cycler">.  {currWord}</span>
                 </span>
             </div>
