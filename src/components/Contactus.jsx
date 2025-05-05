@@ -110,7 +110,7 @@ const Contactus = () => {
                  
                     <h3 className="text-sm text-white">Email</h3>
                   </div>
-                  <p className="text-gray-400 text-sm">mindfull@gmail.com</p>
+                  <p className="text-gray-400 text-sm">marketing@mindfull.co.in</p>
                 </div>
   
                 {/* Social Network */}
