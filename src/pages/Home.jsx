@@ -162,7 +162,7 @@ if (isLoading) {
       <img src={Industries} alt="" style={{width:'100%', marginBottom:'40px'}} />
 </div>
 <div className="content-mobile-view">
-  <div className='Industriesites-swiper'>
+  {/* <div className='Industriesites-swiper'>
     <div>
 <Swiper 
 pagination={{
@@ -182,7 +182,49 @@ slidesPerView={1}>
       }
       </Swiper>
       </div>
-  </div>
+  </div> */}
+  <div className="relative    " style={{width:'100vw'}}>
+          <div className="relative cursor-point">
+            {/* Padded content area */}
+            {/* <div className=" cursor-point"> */}
+              <Swiper
+       modules={[Pagination]}
+              pagination={{ clickable: true }}
+              spaceBetween={20}
+              slidesPerView={1}
+              className="services-swiper-mobile"
+              >
+                {Industriesites.map((item, index) => (
+                  
+      <SwiperSlide key={item}>
+        <div style={{
+
+          width: '90vw',
+          // backgroundColor:'red',
+          display: 'block',
+        }}>
+          {/* <div> */}
+
+          <img 
+            src={item} 
+            style={{
+              margin:'auto',
+              padding:'auto',
+              // marginLeft:'15px',
+              display: 'block',
+              width: '80%',
+              
+            }} 
+            alt="" 
+            />
+            {/* </div> */}
+        </div>
+      
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+          </div>
+        </div>
 </div>
     <section id="contact">
         <Contactus/>
