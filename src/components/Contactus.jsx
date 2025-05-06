@@ -71,7 +71,7 @@ const Contactus = () => {
           <div className="lg:w-1/2">
             <div className="mb-12">
               <h2 className="text-4xl text-gray-300 mb-1">Contact Us,</h2>
-              <p className="text-5xl text-white mb-10">
+              <p className="text-5xl text-white mb-8">
                 Let's Build your <br /> Digital Legacy.
               </p>
               <p className="text-lg max-w-lg text-gray-600">

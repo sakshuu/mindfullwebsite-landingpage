@@ -64,19 +64,29 @@ const Webelieve = () => {
  
   const [visiblePoints, setVisiblePoints] = useState(0);
   const [animationCycle, setAnimationCycle] = useState(0);
-
   useEffect(() => {
-    const timer = setInterval(() => {
-      setVisiblePoints(prev => {
-        if (prev >= points.length - 1) {
-          setTimeout(() => setVisiblePoints(0), 500); 
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [animationCycle]); // Add animationCycle to dependencies
+    let currentPoint = -1
+
+    const interval = setInterval(() => {
+      if (currentPoint < points.length - 1) {
+        currentPoint++
+        setVisiblePoints(currentPoint)
+      } else {
+        // Reset animation after a delay
+        clearInterval(interval)
+        setTimeout(() => {
+          setVisiblePoints(-1)
+          setAnimationCycle((prev) => prev + 1)
+          setTimeout(() => {
+            // Start new animation cycle
+            currentPoint = -1
+          }, 500)
+        }, 3000)
+      }
+    }, 1500)
+
+    return () => clearInterval(interval)
+  }, [animationCycle, points.length])
 
 
 
@@ -121,24 +131,37 @@ const Webelieve = () => {
       ))}
     </div>
   </div>
-<div className='lg:col-span-1  place-items-center'>
-
-{/* </div> */}
-  <div className="timeline-container ">
-    {points.map((point, index) => (
-      <div 
-        key={`${animationCycle}-${index}`}
-        className={`timeline-item ${index <= visiblePoints ? 'visible' : ''}`}
-      >
-        <div className="timeline-dot"></div>
-        {index < points.length - 1 && (
-          <div className={`timeline-connector ${index < visiblePoints ? 'visible' : ''}`}></div>
-        )}
-        <div className="timeline-content text-base md:text-lg">{point}</div>
+  <div className=" max-w-2xl ">
+      <div style={styles.timelineContainer}>
+        {points.map((point, index) => (
+          <div
+            key={`${animationCycle}-${index}`}
+            style={{
+              ...styles.timelineItem,
+              ...(index <= visiblePoints ? styles.timelineItemVisible : {}),
+            }}
+          >
+            <div style={styles.timelineDot}></div>
+            {index < points.length - 1 && (
+              <div
+                style={{
+                  ...styles.timelineConnector,
+                  ...(index <= visiblePoints ? styles.timelineConnectorVisible : {}),
+                }}
+              ></div>
+            )}
+            <div
+              style={{
+                ...styles.timelineContent,
+                ...(index <= visiblePoints ? styles.timelineContentVisible : {}),
+              }}
+            >
+              {point}
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-  </div>
+    </div>
 </div> 
 </div> 
 
@@ -295,3 +318,65 @@ const Webelieve = () => {
 }
 
 export default Webelieve
+
+
+// Styles object
+const styles = {
+  timelineContainer: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "16px",
+    position: "relative",
+  },
+  timelineItem: {
+    display: "flex",
+    alignItems: "flex-start",
+    marginBottom: "50px",
+    position: "relative",
+    opacity: 0,
+    transform: "translateY(10px)",
+    transition: "opacity 0.5s ease, transform 0.5s ease",
+  },
+  timelineItemVisible: {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  timelineDot: {
+    width: "18px",
+    height: "18px",
+    borderRadius: "50%",
+    backgroundColor: "#080808",
+    border: "5px solid white",
+    flexShrink: 0,
+    zIndex: 2,
+  },
+  timelineConnector: {
+    position: "absolute",
+    top: "16px",
+    left: "8px",
+    height: "calc(100% + 50px)",
+    width: "3px",
+    backgroundColor: "#e0e0e0",
+    zIndex: 1,
+    transformOrigin: "top",
+    transform: "scaleY(0)",
+    transition: "transform 0.5s ease 0.3s",
+  },
+  timelineConnectorVisible: {
+    transform: "scaleY(1)",
+  },
+  timelineContent: {
+    marginLeft: "20px",
+    fontSize: "18px",
+    fontWeight: 500,
+    color: "#333",
+    opacity: 0,
+    transform: "translateX(10px)",
+    transition: "opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s, color 0.3s ease",
+  },
+  timelineContentVisible: {
+    opacity: 1,
+    transform: "translateX(0)",
+    color: "white",
+  },
+}
