@@ -31,11 +31,9 @@ const scrollToContact = () => {
 };
   return <>
   <div className="content-desktop-view">
-
-  {/* </div> */}
    <div className='mainhero'>
         <div className='hero-sub-content'>
-          <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }} className='md:col-span-2 ml-32'>
+          <div style={{ display: 'flex', }} className='col-span-2 pl-28 pt-[20%]'>
             <div>
               <div className='text-7xl font-bold md:ml-9 sm:mt-40'>We</div>
               <div className='flex gap-2 items-center'>

@@ -1,6 +1,16 @@
 /* Navbar.css */
 .navbar-container {
-  @apply flex flex-wrap items-center justify-between p-3 text-white shadow-md relative;
+  @apply flex flex-wrap items-center justify-between p-2 px-12 text-white shadow-md ;
+  /* .navbar-container { */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    /* Add other existing styles for your navbar */
+    background: #060606; 
+    z-index: 1000;
+/* } */
 }
 
 .navbar-logo .logo-text {
@@ -48,7 +58,7 @@
   margin-bottom: -21px;
   font-size: 1rem;
   font-weight: 400;
-  margin-left: -10px !important;
+  margin-left: -2px !important;
 }
 
 @keyframes fadeIn {

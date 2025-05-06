@@ -39,7 +39,6 @@
     border-radius: 50%;
     background-color: #080808;
     border: 5px solid white;
-    /* box-shadow: 0 0 0 2px #4a6bff; */
     flex-shrink: 0;
     z-index: 2;
   }
@@ -90,5 +89,6 @@
   .timeline-item-mobile.visible .timeline-content {
     color: #e9c5c5;
   }
+
  
  

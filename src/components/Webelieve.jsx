@@ -171,9 +171,7 @@ const Webelieve = () => {
               alt={item.title}
               width={400}
               height={600}
-              className="w-full h-auto"
-            />
-
+              className="w-full h-auto" />
             <div className="absolute md:bottom-[12%] xl:bottom-[20%] left-0 right-0 text-center md:px-6 xl:px-20 ">
               <h3 className="text-white md:text-xl xl:text-3xl mb-6">{item.title}</h3>
               <p className="text-gray-300 md:text-lg xl:tetx-1xl">{item.desc}</p>

@@ -103,29 +103,39 @@ const Ourworks = () => {
     const handleDragStart = (e, ref) => {
         setIsDragging(true);
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        setStartX(clientX - ref.current.offsetLeft);
-        setScrollLeft(ref.current.scrollLeft);
-        ref.current.style.cursor = 'grabbing';
+        // setStartX(clientX - ref.current.offsetLeft);
+        setStartX(clientX - desktopContainerRef.current.offsetLeft);
+        // setScrollLeft(ref.current.scrollLeft);
+        setScrollLeft(desktopContainerRef.current.scrollLeft);
+        // ref.current.style.cursor = 'grabbing';
+        desktopContainerRef.current.style.cursor = 'grabbing';
     };
 
     const handleDragMove = (e, ref) => {
         if (!isDragging) return;
         
+        // const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        // const x = clientX - ref.current.offsetLeft;
+        // const walk = (x - startX) * 3; 
+
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const x = clientX - ref.current.offsetLeft;
-        const walk = (x - startX) * 3; // Increased multiplier for better scroll
-        ref.current.scrollLeft = scrollLeft - walk;
+        const x = clientX - desktopContainerRef.current.offsetLeft;
+        const walk = (x - startX) * 3;
+        // Increased multiplier for better scroll
+        // ref.current.scrollLeft = scrollLeft - walk;
+        desktopContainerRef.current.scrollLeft = scrollLeft - walk;
     };
 
     const handleDragEnd = (ref) => {
         setIsDragging(false);
-        ref.current.style.cursor = 'grab';
+        // ref.current.style.cursor = 'grab';
+        desktopContainerRef.current.style.cursor = 'grab';
     };
 
     return (
         <>
             {/* Desktop View */}
-            <div className="content-desktop-view">
+            {/* <div className="content-desktop-view">
                 <div className='text-lg md:text-xl text-gray-500 mb-3 px-6 md:px-14 lg:px-28'>Our Work</div>
                 <div className="relative">
                     <div
@@ -142,7 +152,33 @@ const Ourworks = () => {
                         </div>
                     </div>
                 </div>
+            </div> */}
+
+<div className="content-desktop-view">
+            <div className='text-lg md:text-xl text-gray-500 mb-3 px-6 md:px-14 lg:px-28'>Our Work</div>
+            <div className="relative w-full">
+                <div
+                    ref={desktopContainerRef}
+                    className="w-full h-[40vh] sm:h-[50vh] md:h-[45vh] lg:h-[55vh] overflow-x-auto scrollbar select-none"
+                    onMouseDown={handleDragStart}
+                    onMouseLeave={handleDragEnd}
+                    onMouseUp={handleDragEnd}
+                    onMouseMove={handleDragMove}
+                    onTouchStart={handleDragStart}
+                    onTouchEnd={handleDragEnd}
+                    onTouchMove={handleDragMove}
+                    style={{ cursor: 'grab' }}
+                >
+                    <div className="w-max min-w-full">
+                        <img 
+                            src={group} 
+                            className="h-[53vh] w-auto max-w-none object-contain object-left-top pointer-events-none"
+                            alt="Our work" 
+                        />
+                    </div>
+                </div>
             </div>
+        </div>
 
             <div className="content-mobile-view">
                 <div className='text-lg md:text-xl text-gray-500 mb-3 md:px-14 lg:px-28'>Our Work</div>

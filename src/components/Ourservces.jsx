@@ -166,13 +166,11 @@ const Ourservces = () => {
             <div className="flex flex-col lg:flex-row gap-4">
               {/* Text content */}
               <div 
-                className="lg:w-1/2 rounded-lg xl:p-7 md:p-4"
+                className="w-1/2 "
                 style={{ backgroundColor: cardColors[index % cardColors.length] }}
               >
-                <div className="xl:py-20 mb:py-2">
-                  <div className="mb-4">
+                <div className="p-[7%]">
                     <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
-                  </div>
                   <h2 className="xl:text-2xl md:text-xl md:mb-4 font-bold text-black xl:mt-8">
                     {item.title}
                   </h2>
@@ -183,7 +181,7 @@ const Ourservces = () => {
               </div>
               
               {/* Images grid with square boxes */}
-              <div className="lg:w-1/2">
+              <div className="w-1/2">
                 <div className="grid grid-cols-2 gap-4">
                   {item.images.map((image, idx) => (
                     <div 
@@ -208,6 +206,8 @@ const Ourservces = () => {
   </div>
 </div>
   </div>
+
+  
 
   <div className="content-mobile-view">
 <div className='text-xl text-gray-500 mb-6 ml-5'>Our Services</div>
