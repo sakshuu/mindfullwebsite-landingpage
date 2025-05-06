@@ -67,8 +67,8 @@ const scrollToContact = () => {
   </div>
 
   <div className="content-mobile-view">
-      <div className='mainhero-mobile'>
-      <div className='hero-sub-content-mobile'>
+      <div className='mainhero-mobile '>
+      <div className='hero-sub-content-mobile mt-20'>
       <div className='text-5xl font-bold ml-6 mt-16'>We</div>
               <div className='flex gap-2 items-center mt-1'>
                 <div 
@@ -90,7 +90,7 @@ const scrollToContact = () => {
               allowFullScreen
             ></iframe>
           </div> */}
-          <p className='text-base text-gray-300 mt-10'>
+          <p className='text-base text-gray-300 mt-6'>
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
               <button onClick={scrollToContact} className="bg-transparent mt-4 hover:bg-blue-500 text-white  hover:text-white py-2 px-7 border border-blue-500 hover:border-transparent rounded-md">
