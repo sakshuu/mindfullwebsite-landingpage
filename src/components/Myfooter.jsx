@@ -185,11 +185,13 @@ const Myfooter = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="">
+          <div >
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4 rounded-full bg-white"></div>
               <span className='text-xl'>Business / Sales Enquiry</span>
             </div>
+<div className='className=" w-[71%]"'>
+
 
             <div className="flex flex-col md:flex-col xl:flex-row gap-4 mt-4">
               <a
@@ -222,12 +224,13 @@ const Myfooter = () => {
 
             <a onClick={handleEmailClick} 
               href="mailto:marketing@mindfull.co.in"
-              className="py-2 px-8 mt-3 rounded flex items-center justify-center space-x-2" 
-              style={{backgroundColor:'rgba(212, 226, 255, 1)', width:'330px'}}
+              className="py-2 px-2 mt-3 w-auto rounded flex items-center justify-center space-x-2" 
+              style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
             >
               <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
               <span className='text-black'>marketing@mindfull.co.in</span>
             </a>
+            </div>
           </div>
         </div>
 
