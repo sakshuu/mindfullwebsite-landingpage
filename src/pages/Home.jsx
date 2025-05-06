@@ -158,7 +158,7 @@ if (isLoading) {
         </div>
       </div>
 <div className="content-desktop-view">
-      <div className='title-home mb-24 ml-48 '>Industries we serve</div>
+      <div className='title-home mb-8 ml-48 '>Industries we serve</div>
       <img src={Industries} alt="" style={{width:'100%', marginBottom:'40px'}} />
 </div>
 <div className="content-mobile-view">
