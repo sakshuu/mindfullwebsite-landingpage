@@ -190,10 +190,10 @@ const Myfooter = () => {
               <div className="w-4 h-4 rounded-full bg-white"></div>
               <span className='text-xl'>Business / Sales Enquiry</span>
             </div>
-<div className='className=" w-[71%]"'>
+<div className="xl:w-[74%] md:w-[90%] ">
 
 
-            <div className="flex flex-col md:flex-col xl:flex-row gap-4 mt-4">
+            <div className="flex flex-col md:flex-col justify-between xl:flex-row gap-4 mt-4">
               <a
                 href="#"  target="_blank" rel="noreferrer"    onClick={handleWhatsAppClick}
                 className="py-2 px-8 rounded flex items-center justify-center space-x-2" 
@@ -228,7 +228,7 @@ const Myfooter = () => {
               style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
             >
               <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
-              <span className='text-black'>marketing@mindfull.co.in</span>
+              <span className='text-black text-center'>marketing@mindfull.co.in</span>
             </a>
             </div>
           </div>
